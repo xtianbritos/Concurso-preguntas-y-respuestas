@@ -171,6 +171,7 @@ document.addEventListener("click", (e)=>{
 
         // Si la respuesta es correcta se aumenta la ronda, se suma el premio al acomulado y se aumenta el premio 
         if (opcionElegida == categoriaElegida[contador].respuesta) {
+            e.target.classList.toggle("acierto"); // Pinto de verde la respuesta correcta
             contador += 1;
             ronda += 1;
             puntos += premio;
@@ -180,7 +181,10 @@ document.addEventListener("click", (e)=>{
 
             // Si se han contestado menos de 5 preguntas se muestra la siguiente
             if (contador<5){
-                mostrarPreguntas(categoriaElegida, contador);
+                setTimeout(()=>{ // Se espera para cargar la sigiente pregunta para que se vea el acierto
+                    e.target.classList.toggle("acierto"); // Vuelvo a pintar de blanco la opción
+                    mostrarPreguntas(categoriaElegida, contador);
+                }, 350);
             }
             // Sino se muestra el mensaje de felicitaciones y se resetean el contador y la ronda
             else {

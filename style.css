@@ -1,6 +1,8 @@
-
+﻿
 body {
-    background: rgb(145, 231, 133);
+    height: 97vh;
+    background: radial-gradient(grey,black);
+    font-family: monospace;
 }
 
 nav {
@@ -8,12 +10,15 @@ nav {
     font-size: 30px;
     display: flex;
     justify-content: space-between;
+    color: lime;
 }
 
 
 #titulo {
     text-align: center;
     font-size: 50px;
+    color: greenyellow;
+    text-shadow: 0 0 5px green, 0 0 5px green;
 }
 
 .container {
@@ -31,16 +36,18 @@ nav {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+    color: limegreen;
+    box-shadow: 0 10px;
 }
 
 .cat:hover {
-    background: rgba(0, 0, 0, 0.10);
-    color: #fff;
+    background: rgba(46, 231, 129, 0.1);
+    color: lime;
     cursor: pointer;
 }
 
 .cat:active {
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .cat img {
@@ -68,6 +75,8 @@ nav {
     background: #fff;
     width: 60%;
     margin-bottom: 15px;
+    box-shadow: 0 0 10px 0 lightgreen, 0 0 10px 0 lightgreen;
+    border-radius: 10px;
 }
 
 .encabezado div {
@@ -92,6 +101,10 @@ nav {
     cursor: pointer;
 }
 
+h3 {
+    color: chartreuse;
+}
+
 /* ---En caso de respuesta equivocada--- */
 
 .mensaje {
@@ -103,16 +116,24 @@ nav {
     font-size: 200%;
 }
 
+h2 {
+    text-shadow: 0 0 5px chartreuse;
+}
+
 #error {
-    color: #c00;
+    color: #ff3636;
 }
 
 #correcto {
-    color: yellow;
+    color: chartreuse;
 }
 
 a {
     text-decoration: none;
+}
+
+.acierto {
+    background-color: lightgreen;
 }
 
 .boton {
@@ -122,7 +143,6 @@ a {
     padding: 10px 20px;
     color: #fff;
     margin: 0 auto;
-    font-family: calibri;
 }
 
 .boton:hover {
